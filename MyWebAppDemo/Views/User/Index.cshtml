@@ -1,0 +1,55 @@
+﻿@model IEnumerable<userModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container ">
+    <div class="row">
+        <div class="col-6 text-start">User List</div>
+         <div class="col-6 text-end"> <a asp-action="Create" class="btn btn-success" asp-controller="User">Add User</a></div>
+    </div>
+</div>
+
+<table  class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Name
+
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Email
+            </th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        
+        @foreach (var item in Model){
+            var sno =1;
+            <tr>
+            <td>
+               @sno
+            </td>
+                <td>
+                    @item.Name
+                </td>
+                
+                <td>
+                    @item.Username
+                </td>
+                <td>
+                    @item.Email
+                </td>
+        </tr>
+        sno++;
+        }
+    </tbody>
+</table>
