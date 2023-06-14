@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Ims.Models.Employees>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@if(TempData["Success"]!=null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<p>
+    <a asp-controller="Employess" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.JoinDate)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.JoinDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EId">Details</a> |
+                <a asp-action="DeleteData" asp-route-id="@item.EId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
