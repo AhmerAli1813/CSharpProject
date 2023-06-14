@@ -3,8 +3,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Ims.Models;
-namespace InventrySystemMVC.Controllers
+
+namespace InventrySystemMVC.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

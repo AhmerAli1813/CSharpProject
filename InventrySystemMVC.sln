@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventrySystemMVC", "InventrySystemMVC\InventrySystemMVC.csproj", "{D5B2A90F-8EFF-49FF-816B-7B023F99A0B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ims.Models", "ims.Models\ims.Models.csproj", "{AA473FB8-CAC3-4C10-80C0-80D448EC1AAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ims.Models", "ims.Models\Ims.Models.csproj", "{AA473FB8-CAC3-4C10-80C0-80D448EC1AAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ims.DataAccessLayer", "ims.DataAccessLayer\ims.DataAccessLayer.csproj", "{24EA4DE0-793A-4753-8187-77BAC2EAA2E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ims.DataAccessLayer", "ims.DataAccessLayer\ims.DataAccessLayer.csproj", "{24EA4DE0-793A-4753-8187-77BAC2EAA2E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

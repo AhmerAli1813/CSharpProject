@@ -12,6 +12,6 @@ namespace Ims.DataAccessLayer
         public DbSet<Employees> EmpObj { get; set; }
         public DbSet<Departments> DepObj { get; set; }
         public DbSet<Salaries> SalObj { get; set; }
-        public DbSet<EmployessView> EmpViewObj { get; set; }
+        
     }
 }

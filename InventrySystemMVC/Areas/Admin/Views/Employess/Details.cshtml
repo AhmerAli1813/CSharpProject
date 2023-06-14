@@ -1,0 +1,48 @@
+﻿@model Ims.Models.ViewModels.EmpView
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Employees</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employees.Username)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employees.Username)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employees.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employees.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employees.Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employees.Password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employees.ConfirmPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employees.ConfirmPassword)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employees.JoinDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employees.JoinDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="CreateUpdate" asp-route-id="@Model?.employees.EId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

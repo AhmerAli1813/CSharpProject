@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Ims.Models.Employees>
+﻿@model EmpView
 
 @{
     ViewData["Title"] = "Index";
@@ -11,29 +11,29 @@
 }
 
 <p>
-    <a asp-controller="Employess" asp-action="Create">Create New</a>
+    <a asp-controller="Employess" asp-action="CreateUpdate">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Username)
+                @Html.DisplayNameFor(model => model.employees.Username)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.employees.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Password)
+                @Html.DisplayNameFor(model => model.employees.Password)
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.JoinDate)
+                @Html.DisplayNameFor(model => model.employees.JoinDate)
             </th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.EmpList) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Username)
@@ -49,7 +49,7 @@
                 @Html.DisplayFor(modelItem => item.JoinDate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.EId">Edit</a> |
+                <a asp-action="CreateUpdate" asp-route-id="@item.EId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.EId">Details</a> |
                 <a asp-action="DeleteData" asp-route-id="@item.EId">Delete</a>
             </td>
