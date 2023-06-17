@@ -17,9 +17,6 @@ namespace ims.DataAccessLayer.Infrastructure.Repository
             _context = context;
             employees = new EmployeeRepository(context);
         }
-
-        
-
         public void Save()
         {
             _context.SaveChanges();

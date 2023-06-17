@@ -14,6 +14,8 @@ namespace ims.DataAccessLayer.Infrastructure.IRepository
         void Add(T entity);
         void Delete(T entity);
         void DeleteRange(T entity);
+        
+
 
     }
 }

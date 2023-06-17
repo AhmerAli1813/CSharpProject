@@ -24,27 +24,14 @@ namespace InventrySystemMVC.Areas.Admin.Controllers
             Employeess.EmpList = _unitOfWork.employees.GetAll();
             return View(Employeess);
         }
-        //[HttpGet]
-        //public IActionResult Create()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Create(Employees EmpModel)
-        //{
-        //    _unitOfWork.employees.Add(EmpModel);
-        //    _unitOfWork.Save();
-        //    TempData["Success"] = "Employee Created Done";
-        //    return RedirectToAction(nameof(Index));
-        //}
+       
         [HttpGet]
         public IActionResult CreateUpdate(int? id)
         {
             EmpView EmpModels = new EmpView();
             if (id==null | id == 0)
             {
-                return View(EmpModels.employees);
+                return View(EmpModels);
             }
             else
             {
